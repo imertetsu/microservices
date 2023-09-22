@@ -31,7 +31,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config' //ser agrega una vez terminado el CONFIG SERVER
 	implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap' //esta dependencia arregla el error de config
-	//implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client' //Una vez Eureka server este terminado
 	runtimeOnly 'com.mysql:mysql-connector-j:8.0.33'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'

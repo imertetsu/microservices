@@ -1,2 +1,17 @@
-package com.userservice.dto;public class CustomerDTO {
+package com.userservice.dto;
+
+import com.userservice.entities.UserEntity;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class CustomerDTO {
+    private String name;
+    private String email;
+    private String phoneNumber;
+    private String address;
+    private UserEntity user;
 }
