@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
@@ -20,12 +22,11 @@ public class ProductEntity {
     private Long id;
     private String name;
     private String description;
-    private Double stock;
-    private Double price;
+    private Long stock;
+    private BigDecimal price;
     private String status;
-    @Column(name = "created_at")
-    @Temporal(TemporalType.DATE)
-    private Date createdAt;
+    @Column(name = "created_at", columnDefinition = "DATETIME")
+    private LocalDateTime createdAt;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id")
